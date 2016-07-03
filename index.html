@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Chaning image </title>
+	<script type="text/javascript">
+	
+	var timer_int = 'f';
+	function change() {
+		
+		var image = document.getElementById("social");
+		
+			if (timer_int == 'f') {
+				image.src = "twiter.jpg";
+				timer_int = 't';
+			} else {
+				image.src = "face.jpg";
+				timer_int = 'f';
+			}
+			
+	}
+		
+	
+		
+		var th = setInterval('change()',2000);
+		
+		function stoptimer () {
+		
+			clearInterval(th);
+		}
+		
+	</script>
+	
+	</head>
+	
+	<body>
+		<img src="face.jpg" alt="social logo" id="social" onclick="stoptimer()" " />
+		
+		
+	
+	</body>
+</html>
